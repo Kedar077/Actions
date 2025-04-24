@@ -71,7 +71,7 @@ jobs:
         run: mvn package
 
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@<action version> # Replace <action version> with e.g., v4.1.0
+        uses: SonarSource/sonarqube-scan-action@v5.0.0 # Replace <action version> with e.g., v4.1.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
