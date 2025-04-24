@@ -71,14 +71,14 @@ jobs:
         run: mvn package
 
       - name: SonarQube Scan
-        uses: SonarSource/sonarqube-scan-action@v5.0.0 # Replace <action version> with e.g., v4.1.0
+        uses: SonarSource/sonarqube-scan-action@v4.1.0 # Replace <action version> with e.g., v4.1.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           SONAR_HOST_URL: ${{ vars.SONAR_HOST_URL }}
 
       - name: SonarQube Quality Gate check
         id: sonarqube-quality-gate-check
-        uses: sonarsource/sonarqube-quality-gate-action@master
+        uses: sonarsource/sonarqube-quality-gate-action@v4.1.0
         with:
           pollingTimeoutSec: 600
         env:
