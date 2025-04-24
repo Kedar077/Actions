@@ -64,7 +64,7 @@ jobs:
     - name: Test with Maven
       run: mvn test
 
- Build-Sonarscan :
+  Build-Sonarscan :
 
     runs-on: self-hosted
     needs: test
@@ -80,7 +80,7 @@ jobs:
     - name: Build Project
       run: mvn package
 
-  - uses: actions/checkout@v4
+    - uses: actions/checkout@v4
       with:
         # Disabling shallow clones is recommended for improving the relevancy of reporting
         fetch-depth: 0
